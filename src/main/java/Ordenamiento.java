@@ -1,12 +1,24 @@
+import java.util.*;
+
 public class Ordenamiento {
     public static void main(String[] args) {
-        int arr[] = {5, 2, 11, -8, 115, 56, -3};
-        ordenar(arr);
-        System.out.println(java.util.Arrays.toString(arr));
-    }
+       
+   Scanner teclado = new Scanner(System.in); 
+        System.out.println("Ingrese la cantidad de numeros");
+        int cn= teclado.nextInt();
+        
+        int arr[] = new int [cn];
+        
+        for( int i = 0; i<cn; i++){
+            System.out.println("ingrese numero: "+ (i+1)+ ":");
+        arr[i] = teclado.nextInt(); }
+         
+      ordenar(arr);
+        //System.out.println("");
+    
     private static void ordenar(int v[]) {
         for (int i = 0; i < v.length-1; i++) {
-            for (int j = i+1; j < v.length; j++) {
+            for (int j = i+1; j < v.length ; j++) {
                 if (v[i] > v[j]) {
                     int w = v[j];
                     v[j] = v[i];
@@ -16,3 +28,5 @@ public class Ordenamiento {
         }
     }
 }
+//el usuario da el tamaño de el arr
+//el usuario da los datos de el arr
