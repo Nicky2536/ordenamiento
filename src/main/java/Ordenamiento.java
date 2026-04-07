@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class Ordenamiento {
@@ -14,10 +15,11 @@ public class Ordenamiento {
         arr[i] = teclado.nextInt(); }
          
       ordenar(arr);
-        //System.out.println("");
+        System.out.println("El arreglo Ordenado: "+ Arrays.toString(arr));
+        teclado.close();
     
     private static void ordenar(int v[]) {
-        for (int i = 0; i < v.length-1; i++) {
+        for (int i = 0; i < v.length; i++) {
             for (int j = i+1; j < v.length ; j++) {
                 if (v[i] > v[j]) {
                     int w = v[j];
